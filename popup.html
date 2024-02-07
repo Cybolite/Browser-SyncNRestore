@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backup And Restore Tabs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            min-width: 400px;
+            background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(216, 249, 249) 100% /*, rgba(255, 255, 255, 1) 100%*/);
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 20px;
+            color: #4CAF50;
+        }
+
+        #reload, #closeAll {
+            cursor: pointer;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        input[type="checkbox"] {
+            cursor: pointer;
+        }
+        
+
+        #saveTabs {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #saveTabs:hover {
+            background-color: #45a049;
+        }
+
+        #restoreTabs {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #restoreTabs:hover {
+            background-color: #da190b;
+        }
+
+        .rounded {
+            border-radius: 34px;
+        }
+
+        #closeAll {
+            margin-left: 10px;
+            padding: 5px;
+        }
+
+        #closeAll:hover {
+            background-color: #fdcecb;
+        }
+
+
+        #reload {
+            margin-left: 10px;
+            padding: 5px;
+        }
+
+        #reload:hover {
+            background-color: #b6e8fb;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <h1>Backup And Restore Tabs
+        <span id="reload">🔄</span>
+        <span id="closeAll">❌</span>
+    </h1>
+    <div id="status">Status: Ready.</div>
+
+    <!-- sync switch -->
+    <div class="switch">
+        <label for="sync"><span>🔂</span> Sync</label>
+        <input type="checkbox" name="sync" id="sync" class="sync">
+    </div>
+    <div class="switch">
+        <label for="enc"><span>🔒</span> Encrypt</label>
+        <input type="checkbox" name="enc" id="enc" class="enc">
+    </div>
+    <div class="btn">
+        <button id="saveTabs" class="rounded"> <span class="icon">💾</span> Save Tabs</button>
+        <button id="restoreTabs" class="rounded"> <span class="icon">↩️</span> Restore Tabs</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
